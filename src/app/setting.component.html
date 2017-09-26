@@ -1,0 +1,42 @@
+<div class="right-sidebar">
+  <div class="tabs">
+    <div data-key="styleTab" class="tab show-tip style-tab" (click)="changePanelIndex(1)" [ngClass]="{active:panelIndex == 1}">
+      <span class="sprite-mid"><i></i></span>
+    </div>
+    <div data-key="settingsTab" class="tab show-tip settings-tab" (click)="changePanelIndex(2)" [ngClass]="{active:panelIndex == 2}">
+      <span class="sprite-mid" ><i></i></span>
+    </div>
+    <div data-key="navigatorTab" class="tab show-tip navigator-tab" (click)="changePanelIndex(3)" [ngClass]="{active:panelIndex == 3}">
+      <span class="sprite-mid" ><i></i></span>
+    </div>
+
+    <div data-key="allStylesTab" class="tab show-tip all-styles-tab" (click)="changePanelIndex(4)" [ngClass]="{active:panelIndex == 4}">
+      <span class="sprite-mid"><i></i></span>
+    </div>
+    <div data-key="objectsTab" class="tab show-tip objects-tab" (click)="changePanelIndex(5)" [ngClass]="{active:panelIndex == 5}">
+      <span class="sprite-mid"><i></i></span>
+    </div>
+    <div data-key="assetsTab" class="tab show-tip assets-tab" (click)="changePanelIndex(6)" [ngClass]="{active:panelIndex == 6}">
+      <span class="sprite-mid"><i></i></span>
+    </div>
+  </div>
+
+  <div id="flux-tabs" class="inner">
+    <div data-reactroot="" class="tab-pane">
+      <div></div>
+      <div class="hud-preload">preload</div>
+    </div>
+  </div>
+
+  <!-- tab内容 -->
+  <div class="inner" style="width: 100%;">
+    <!--<setting-panel v-if="panelIndex==1"></setting-panel>-->
+    <!--<nav-tree v-show="panelIndex==2"></nav-tree>-->
+
+    <my-setting-property *ngIf="panelIndex == 2" [root]="root"></my-setting-property>
+
+    <my-setting-navigator *ngIf="panelIndex == 3" [root]="root"></my-setting-navigator>
+
+  </div>
+
+</div>

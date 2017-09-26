@@ -1,0 +1,79 @@
+<div class="bem-ContextMenu" style="" *ngIf="show"
+     [style.top.px]="locationTop" [style.left.px]="locationLeft"
+>
+  <div class="bem-Menu ">
+    <div class="bem-Menu_Section">
+      <div class="bem-Menu_Item " style="display: flex; align-items: center;">
+        <span class="bem-Text " style="flex-grow: 1;">Select Parent Element</span>
+        <div class="bem-Menu_Caret" style="display: flex; align-items: center;">
+          <svg width="6" height="9" viewBox="0 0 6 9" class="bem-Svg "
+               style="display: block; transform: translate(0px, 0px);">
+            <path fill="currentColor" d="M5 4.5L1 8V1z"></path>
+          </svg>
+        </div>
+        <div class="bem-Menu">
+          <div class="bem-Menu_Section">
+
+            <div *ngFor="let node of selectTree" class="bem-Menu_Item bem-Menu_Item-selectable"
+                 style="display: flex; align-items: center;">
+              <div class="bem-Menu_Item_Icon" style="display: flex; flex-shrink: 0;">
+
+                <svg *ngIf="isSelected(node)" width="13" height="11" viewBox="0 0 13 11" class="bem-Svg "
+                     style="display: block; transform: translate(0px, 0px); margin: auto;">
+                  <path fill="none" stroke="currentColor" stroke-width="2" stroke-miterlimit="10"
+                        d="M11 2L5.5 8.5 2 5"></path>
+                </svg>
+
+              </div>
+              <div (click)="select(node)" class="bem-Menu_Item_Body"><i class="bem-Icon  icon-el n-column"
+                                                                        style="width: 12px;"></i><span
+                class="bem-Text ">{{node.type}}</span></div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bem-Menu_Section">
+      <div class="bem-Menu_Item " style="display: flex; align-items: center;"><span class="bem-Text "
+                                                                                    style="flex-grow: 1;">Cut</span><span
+        class="bem-Text bem-Text-dim bem-Menu_Shortcut">⌘X</span></div>
+      <div class="bem-Menu_Item " style="display: flex; align-items: center;"><span class="bem-Text "
+                                                                                    style="flex-grow: 1;">Copy</span><span
+        class="bem-Text bem-Text-dim bem-Menu_Shortcut">⌘C</span></div>
+      <div class="bem-Menu_Item bem-Menu_Item-disabled" style="display: flex; align-items: center;"><span
+        class="bem-Text " style="flex-grow: 1;">Paste Inside</span><span
+        class="bem-Text bem-Text-dim bem-Menu_Shortcut">⌘V</span></div>
+      <div class="bem-Menu_Item bem-Menu_Item-disabled" style="display: flex; align-items: center;"><span
+        class="bem-Text " style="flex-grow: 1;">Paste Inside First</span><span
+        class="bem-Text bem-Text-dim bem-Menu_Shortcut">⇧⌘V</span></div>
+      <div data-automation-id="context-menu-duplicate-item" class="bem-Menu_Item "
+           style="display: flex; align-items: center;"><span class="bem-Text "
+                                                             style="flex-grow: 1;">Duplicate</span><span
+        class="bem-Text bem-Text-dim bem-Menu_Shortcut"></span></div>
+      <div class="bem-Menu_Item " style="display: flex; align-items: center;" (click)="deleteNode()">
+        <span class="bem-Text " style="flex-grow: 1;">Delete</span><span
+        class="bem-Text bem-Text-dim bem-Menu_Shortcut">⌫</span>
+      </div>
+    </div>
+    <div class="bem-Menu_Section">
+      <div class="bem-Menu_Item bem-Menu_Item-disabled" style="display: flex; align-items: center;">
+        <!-- react-text: 63360 -->Move to Parent<!-- /react-text --></div>
+    </div>
+    <div class="bem-Menu_Section">
+      <div data-automation-id="context-menu-create-symbol" class="bem-Menu_Item "
+           style="display: flex; align-items: center;">
+        <div style="margin-top: -1px; padding-right: 6px;">
+          <svg width="9" height="10" viewBox="0 0 9 10" class="bem-Svg "
+               style="display: block; transform: translate(0px, 0px);">
+            <path
+              d="M4.5 0l-4 2.286 4 2.286 4-2.286L4.5 0zM5 5.43V10l4-2.285V3.143L5 5.43zM0 7.714L4 10V5.43L0 3.142v4.572z"
+              fill="currentColor" fill-rule="evenodd"></path>
+          </svg>
+        </div>
+        <span class="bem-Text " style="flex-grow: 1;">Create Symbol</span><span
+        class="bem-Text bem-Text-dim bem-Menu_Shortcut">⇧⌘A</span></div>
+    </div>
+  </div>
+</div>

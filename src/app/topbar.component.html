@@ -1,0 +1,112 @@
+<div class="bem-TopBar">
+  <div class="bem-TopBar_Body" style="top: 0px;">
+    <!-- 顶部左侧 -->
+    <div class="bem-TopBar_Body_Group bem-TopBar_Body_Group-left">
+      <div class="bem-TopBar_Body_ContextLens">
+        <div class="bem-TopBar_Body_ContextLens_Name " >
+          <span class="bem-TopBar_Body_ContextLens_Name_Label ">Page: </span>
+          <span class="bem-TopBar_Body_ContextLens_Name_Value ">Home</span>
+        </div>
+      </div>
+      <div class="bem-TopBar_Body_Button bem-TopBar_Body_PreviewButton ">
+        <svg width="18" height="14" viewBox="0 0 18 14"
+             class="bem-Svg bem-TopBar_Body_PreviewButton_Icon bem-TopBar_Body_Button_Icon"
+             style="transform: translate(0px, 0px);">
+          <path fill="currentColor"
+                d="M9.028 1C4.596 1 1 6.94 1 6.94s3.596 6.1 8.028 6.1c4.434 0 8.027-6.1 8.027-6.1S13.462 1 9.028 1zM9 11a4 4 0 0 1-4-4c0-2.027 1.512-3.683 3.467-3.946A2.48 2.48 0 0 0 8 4.5 2.5 2.5 0 0 0 10.5 7a2.49 2.49 0 0 0 2.234-1.4c.164.437.266.906.266 1.4a4 4 0 0 1-4 4z"></path>
+        </svg>
+      </div>
+    </div>
+    <!-- 设备切换区 -->
+    <div class="bem-TopBar_Body_Group ">
+      <div class="bem-TopBar_Body_Button bem-TopBar_Body_MediaQueryButton bem-TopBar_Body_MediaQueryButton-active">
+        <svg width="33" height="23" viewBox="0 0 33 23"
+             class="bem-Svg bem-TopBar_Body_MediaQueryButton_Icon bem-TopBar_Body_Button_Icon"
+             style="transform: translate(0px, 0px);">
+          <path fill="currentColor" d="M7 4h19v14H7z" opacity=".3"></path>
+          <path fill="currentColor"
+                d="M29 19H1v1.563h.02C1.135 21.358 3.32 22 6 22h21c2.68 0 4.866-.642 4.98-1.437H32V19h-3zM6 3h21v16h2V3c0-1.1-.9-2-2-2H5.947C4.847 1 4 1.9 4 3v16h2V3z"></path>
+        </svg>
+      </div>
+      <div class="bem-TopBar_Body_Button bem-TopBar_Body_MediaQueryButton ">
+        <svg width="20" height="24" viewBox="0 0 20 24"
+             class="bem-Svg bem-TopBar_Body_MediaQueryButton_Icon bem-TopBar_Body_Button_Icon"
+             style="transform: translate(0px, 0px);">
+          <path fill="currentColor"
+                d="M17 1H3c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm-6 21H9v-2h2v2zm6-2.952H3V3h14v16.048z"></path>
+          <path fill="currentColor" d="M4 4h12v14H4z" opacity=".3"></path>
+        </svg>
+      </div>
+      <div class="bem-TopBar_Body_Button bem-TopBar_Body_MediaQueryButton ">
+        <svg width="20" height="14" viewBox="0 0 20 14"
+             class="bem-Svg bem-TopBar_Body_MediaQueryButton_Icon bem-TopBar_Body_Button_Icon"
+             style="transform: translate(0px, 0px);">
+          <path fill="currentColor" d="M6 4h10v6H6z" opacity=".3"></path>
+          <path fill="currentColor"
+                d="M17 1H3.048C1.948 1 1 1.9 1 3v8c0 1.1.947 2 2.048 2H17c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zM4 8H2V6h2v2zm13 3H5V3h12v8z"></path>
+        </svg>
+      </div>
+      <div class="bem-TopBar_Body_Button bem-TopBar_Body_MediaQueryButton ">
+        <svg width="14" height="20" viewBox="0 0 14 20"
+             class="bem-Svg bem-TopBar_Body_MediaQueryButton_Icon bem-TopBar_Body_Button_Icon"
+             style="transform: translate(0px, 0px);">
+          <path fill="currentColor" d="M4 4h6v10H4z" opacity=".3"></path>
+          <path fill="currentColor"
+                d="M11 1H3c-1.1 0-2 .9-2 2v13.952C1 18.052 1.9 19 3 19h8c1.1 0 2-.947 2-2.048V3c0-1.1-.9-2-2-2zM8 18H6v-2h2v2zm3-3H3V3h8v12z"></path>
+        </svg>
+      </div>
+    </div>
+    <!-- 顶部右侧 -->
+    <div class="bem-TopBar_Body_Group bem-TopBar_Body_Group-right">
+      <div class="bem-TopBar_Body_UndoRedo">
+        <div class="bem-TopBar_Body_Button bem-TopBar_Body_UndoRedo_Undo" [ngClass]="{'bem-TopBar_Body_UndoRedo_Undo-active':hasUndo}" (click)="undo()">
+          <svg width="17" height="15" viewBox="0 0 17 15"
+               class="bem-Svg bem-TopBar_Body_UndoRedo_Undo_Icon bem-TopBar_Body_Button_Icon"
+               style="transform: translate(0px, 0px);">
+            <path fill="currentColor"
+                  d="M7 5.035V1L1 7.498 7 14V9.957c2.17-.03 7.258.312 8.562 4.043h.436S15.858 5.624 7 5.035z"></path>
+          </svg>
+        </div>
+        <div class="bem-TopBar_Body_Button bem-TopBar_Body_UndoRedo_Redo " [ngClass]="{'bem-TopBar_Body_UndoRedo_Undo-active':hasRedo}" (click)="redo()">
+          <svg width="17" height="15" viewBox="0 0 17 15"
+               class="bem-Svg bem-TopBar_Body_UndoRedo_Redo_Icon bem-TopBar_Body_Button_Icon"
+               style="transform: translate(0px, 0px);">
+            <path fill="currentColor"
+                  d="M16 7.498L10 1v4.035C1.14 5.625 1.002 14 1.002 14h.435C2.742 10.27 7.83 9.928 10 9.957V14l6-6.502z"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="bem-TopBar_Body_SyncStatus bem-TopBar_Body_SyncStatus-readOnly">
+        <svg width="22" height="19" viewBox="0 0 22 19"
+             class="bem-Svg bem-TopBar_Body_SyncStatus_Icon bem-TopBar_Body_Button_Icon"
+             style="transform: translate(0px, 0px);">
+          <path fill="currentColor"
+                d="M20.256 16.698L11.744 1.802c-.41-.716-1.08-.716-1.488 0L1.744 16.698c-.41.716-.07 1.302.756 1.302h17c.825 0 1.165-.586.756-1.302zM11 16.302A1.306 1.306 0 0 1 9.698 15c0-.716.586-1.302 1.302-1.302s1.302.586 1.302 1.302c0 .716-.586 1.302-1.302 1.302zM11.8 12h-1.6l-.45-5h2.5l-.45 5z"></path>
+        </svg>
+      </div>
+      <div class="bem-TopBar_Body_Button bem-TopBar_Body_ExportButton bem-TopBar_Body_ExportButton-disabled">
+        <svg width="22" height="16" viewBox="0 0 22 16"
+             class="bem-Svg bem-TopBar_Body_ExportButton_Icon bem-TopBar_Body_Button_Icon"
+             style="transform: translate(0px, 0px);">
+          <path fill="currentColor"
+                d="M4.873 8.065L9.18 1.042H5.31L1 8.065 5.308 15H9.18L4.874 8.065zM16.69 1.042h-3.872l4.308 7.023L12.816 15h3.874L21 8.065l-4.31-7.023z"></path>
+        </svg>
+      </div>
+      <div class="bem-TopBar_Body_Button bem-TopBar_Body_PublishButton bem-TopBar_Body_PublishButton-disabled">
+        <svg width="18" height="18" viewBox="0 0 18 18"
+             class="bem-Svg bem-TopBar_Body_PublishButton_Icon bem-TopBar_Body_Button_Icon"
+             style="transform: translate(0px, 0px);">
+          <path fill-rule="evenodd" clip-rule="evenodd" fill="currentColor"
+                d="M12.995 9.076c0-.026.005-.05.005-.076 0-3.304-1.582-6.22-4-8-2.418 1.78-4 4.696-4 8 0 .026.004.05.005.076A7.99 7.99 0 0 0 1 16h2.012a7.526 7.526 0 0 1 3.095-2.406A9.797 9.797 0 0 0 9 17a9.797 9.797 0 0 0 2.893-3.406A7.526 7.526 0 0 1 14.988 16H17a7.99 7.99 0 0 0-4.005-6.924zM9 4.436a1.564 1.564 0 0 1 0 3.13 1.564 1.564 0 1 1 0-3.13z"></path>
+        </svg>
+        <span class="bem-Text ">Publish</span>
+        <svg width="11" height="7" viewBox="0 0 11 7"
+             class="bem-Svg bem-TopBar_Body_PublishButton_ChevronDown bem-TopBar_Body_Button_Icon"
+             style="transform: translate(0px, 0px);">
+          <path fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-miterlimit="10" d="M9 2L5.5 5 2 2"></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>

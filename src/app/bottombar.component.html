@@ -1,0 +1,26 @@
+<div class="bem-BottomBar ">
+  <div class="bem-BottomBar_Main">
+
+    <div class="bem-BottomBar_Placeholder" *ngIf="!hasSelected">No Element Selected</div>
+    <div class="bem-Breadcrumbs" *ngIf="hasSelected">
+      <div class="bem-Breadcrumbs_Container">
+
+        <div *ngFor="let node of selectTree" class="bem-Breadcrumbs_Breadcrumb "
+             style="background-color: rgb(212, 212, 212);">
+          <div class="bem-Breadcrumbs_Breadcrumb_Inner ">
+            <i class="el-icon"></i>
+            <div class="label" [title]="node.type  + '[' + node.id + ']'" (click)="selectNode(node)">
+              {{node.type}}
+            </div>
+          </div>
+          <svg width="7" height="28" viewBox="0 0 7 28" class="bem-Svg right notch"
+               style="display: block; transform: translate(0px, 0px); color: rgb(212, 212, 212);">
+            <path fill="currentColor" d="M.5 0l6 14-6 14H7V0z"></path>
+            <path fill="#858585" d="M1 0H0l6 14-6 14h1l6-14z"></path>
+          </svg>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

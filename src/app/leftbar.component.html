@@ -1,0 +1,46 @@
+<div>
+  <div class="left-sidebar">
+    <div class="left-sidebar-links">
+      <div class="button logo-flux"></div>
+
+      <div class="button top show-tip add" [ngClass]="{active: currentPanel == 1 && addElementConfig.show==true}" (click)="togglePanel(1)"><i class="icon-main chrome-add"></i></div>
+      <div class="button top show-tip" ><i class="icon-main chrome-pages"></i></div>
+      <div class="bottom">
+        <div class="button setting sprite-mid edges show-tip active"><i
+          class="icon-main chrome-show-edges"></i></div>
+        <div class="button setting sprite-mid empty show-tip active"><i
+          class="icon-main chrome-show-empty"></i></div>
+        <div class="button setting sprite-mid grid show-tip none"><i
+          class="icon-main chrome-show-grid"></i></div>
+        <div class="button setting sprite-mid xray show-tip with-divider"><i
+          class="icon-main chrome-show-xray"></i></div>
+        <div class="button tutorials show-tip"><i
+          class="icon-main ftu-video-big-blue exclaim"></i><i
+          class="icon-main ftu-video-big"></i></div>
+        <div class="help-section">
+          <div class="button trigger sprite-mid"><i class="icon-main chrome-help"></i></div>
+          <div class="popup-menu">
+            <div class="tick"></div>
+            <div class="link kbase"><i class="sprite-main"></i><span>Help Center</span>
+            </div>
+            <div class="link videos"><i class="sprite-main"></i><span>Video Tutorials</span>
+            </div>
+            <div class="link videos"><i class="sprite-main"></i><span>Courses</span></div>
+            <div class="link forum"><i class="sprite-main"></i><span>Forums</span></div>
+            <div class="link keys"><i
+              class="sprite-main"></i><span>Keyboard Shortcuts</span></div>
+            <div class="link email"><i class="sprite-main"></i><span>Contact Us</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 左侧工具栏浮层开始 -->
+  <div class="bem-LeftSidebarPanels visible">
+    <ide-leftbar-component-panel [showAddElement]="addElementConfig"></ide-leftbar-component-panel>
+    <!--<component-panel></component-panel>-->
+    <!--<page-panel></page-panel>-->
+  </div>
+  <!-- 左侧工具栏浮层结束 -->
+
+</div>

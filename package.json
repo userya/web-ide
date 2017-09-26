@@ -23,6 +23,7 @@
     "@angular/router": "^4.0.0",
     "core-js": "^2.4.1",
     "rxjs": "^5.4.1",
+    "@types/uuid": "^3.4.0",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
